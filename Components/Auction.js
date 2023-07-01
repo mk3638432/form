@@ -34,10 +34,12 @@ const Auctions = () => {
   
   const handleEdit = (ind) => {
     let newEditItem = item.find((ele) => {
-       return ele.id === ind
+        console.log(ele.id , ind)
+        return ele.id === ind
     })
     console.log(newEditItem.value)
-    setItem(newEditItem.value)
+    setItem(newEditItem);
+
  };
   return (
     <div>
@@ -51,14 +53,14 @@ const Auctions = () => {
               placeholder="add bid"
               ref={inputRef}
             />
+            
             <button onClick={addHandler}> ADD</button>
           </div>
         )}
       </div>
       {filteredItem.map((ele) => {
         return (
-          <div key={ele.id}>
-            
+          <div key={ele.id}>   
             <h3>{ele.value} </h3>
             <button
               onClick={() => handleDelete(ele.id)}

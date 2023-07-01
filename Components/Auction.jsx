@@ -8,7 +8,7 @@ const Auction = () => {
 
   const handleBidAdded = () => {
     setaddBid(true);
-  };
+  }; 
 
   const handleAddButton = () => {
     if (!inputData) return;
@@ -46,7 +46,7 @@ const Auction = () => {
      })
      console.log(newEditItem)
      setInputData(newEditItem.name)
-     setEditItem(ind)
+     setEditItem('')
   };
 
 //   return (
